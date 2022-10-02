@@ -4,18 +4,19 @@
 
 #include<assert.h>
 using namespace std;
-#define A1 2  //×ó¾ØÕóµÄĞĞºÍÁĞ
+#define A1 2  //å·¦çŸ©é˜µçš„è¡Œå’Œåˆ—
 #define B1 2
-#define A2 2//ÓÒ¾ØÕóµÄĞĞºÍÁĞ
+#define A2 2//å³çŸ©é˜µçš„è¡Œå’Œåˆ—
 #define B2 2
 
 void ABC(double arr1[][A1], double arr2[][B2], double arr3[][B2], int b1, int a2, int a1, int b2)
 {
     assert(a1 == b2);
-    int i = 0;//ĞĞ
-    int j = 0;//ÁĞ
+    int i = 0;//è¡Œ
+    int j = 0;//åˆ—
     int k = 0;
-    printf("Êı×éarr1*arr2=\n");
+    double sum= 0;
+    printf("æ•°ç»„arr1*arr2=\n");
 
     for (i = 0; i < b1; i++)
     {
@@ -25,44 +26,44 @@ void ABC(double arr1[][A1], double arr2[][B2], double arr3[][B2], int b1, int a2
             {
                 arr3[i][j] += arr1[i][k] * arr2[k][j];
                 printf(" %lf  ", arr3[i][j]);
-
+                sum += arr1[k][j] * arr2[j][i];
 
             }
         }
     }
-    
-
+  
+printf("%lf\n",sum);
 }
 
 
 int main()
 {
-    //int x, n;
-    //n = 4;
-    //int a[5];
-    //for (int i = 0; i < n; i++)
-    //{
-    //    scanf("%d", &a[i]);
-    //}
-    //scanf("%d", &x);//²åÈëÊı×Ö
+    int x, n;
+    n = 4;
+    int a[5];
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &a[i]);
+    }
+    scanf("%d", &x);//æ’å…¥æ•°å­—
 
-    //for (int i = 0; i < n; i++)
-    //{
-    //    if (a[i] > x)
-    //    {
-    //        for (int j = n; j > i; j--)
-    //        {
+    for (int i = 0; i < n; i++)
+    {
+        if (a[i] > x)
+        {
+            for (int j = n; j > i; j--)
+            {
 
-    //            a[j] = a[j - 1];
-    //        }
-    //        a[i] = x;
-    //        break;
-    //    }
-    //}
-    //for (int i = 0; i < n + 1; i++)
-    //{
-    //    printf("%d ", a[i]);
-    //}
+               a[j] = a[j - 1];
+           }
+            a[i] = x;
+          break;
+       }
+    }
+    for (int i = 0; i < n + 1; i++)
+    {
+        printf("%d ", a[i]);
+    }
     cout << "\n";
     double arr1[B1][A1] = { 1,2 ,8,5 };
     double arr2[A2][B2] = { 3,4 ,5,6  };
