@@ -2,15 +2,15 @@
 #include<windows.h>
 using namespace std;
 int main() {
-	cout << "原数组为" << endl;
+	cout << "鍘熸暟缁勪负" << endl;
 	const int a = 10; int input, t;
-	int example[a] = {1,2,3,4,6,8,10,12,15};//定义数组
+	int example[a] = {1,2,3,4,6,8,10,12,15};//瀹氫箟鏁扮粍
 	for (int i = 0; i < a-1; i++) {
 		cout << example[i] << "\t" ;
 	}
 	cout << endl;
-	cout << "请输入一个数,接下来将进行排列" << endl;
-	cin >> input;//用户输入
+	cout << "璇疯緭鍏ヤ竴涓暟,鎺ヤ笅鏉ュ皢杩涜鎺掑垪" << endl;
+	cin >> input;//鐢ㄦ埛杈撳叆
 	for (int i = 0; i < a-1; i++) {
 		if (input < example[i]) 
 		{
@@ -22,7 +22,7 @@ int main() {
 		example[i + 1] = example[i];
 	}
 	example[t] = input;
-	cout << "新数组为" << endl;
+	cout << "鏂版暟缁勪负" << endl;
 	for (int i = 0; i < a; i++) {
 		cout << example[i] << "\t";
 	}
