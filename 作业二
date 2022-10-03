@@ -1,0 +1,48 @@
+  #define _CRT_SECURE_NO_WARNINGS 
+  #include <stdio.h> 
+  
+   int main() 
+  { 
+  int A[5][5] = { 0 }, B[5][5] = { 0 }, C[5][5] = {0}; 
+  
+   int i, j, k; 
+  printf("A:\n" ); 
+  for (i = 0; i < 5; i++) 
+  { 
+  
+   for (j = 0; j < 5; j++) 
+  { 
+  
+   scanf_s("%d",&A[i][j]); 
+  } 
+  } 
+  printf("B:\n"); 
+  for (i = 0; i < 5; i++) 
+  { 
+  for (j = 0; j < 5; j++) 
+  { 
+  scanf_s("%d", &B[i][j]); 
+  } 
+  } 
+  for (i = 0; i < 5; i++) 
+  { 
+  for (j = 0; j < 5; j++) 
+  { 
+  for (k = 0; k < 5; k++) 
+  { 
+  C[i][k] += A[i][j] * B[j][k]; 
+  } 
+  } 
+  } 
+  printf("矩阵相乘的结果为：\n"); 
+  for (i = 0; i < 5; i++) 
+  { 
+  for (j = 0; j < 5; j++) 
+  { 
+  printf("%3d", C[i][j]); 
+  } 
+  printf("\n"); 
+  } 
+  
+   return 0; 
+  } 
