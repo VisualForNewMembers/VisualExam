@@ -1,0 +1,40 @@
+# VisualExam
+梯队考核1
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int n;
+	int a[10]={1,2,3,4,5,7,8,9,10,11};  //创建原数组 
+	int i;
+	printf("原数组为:");
+	for(i=0;i<10;i++)
+	printf("%d ",a[i]);    //输出原数组 
+	int x,j;
+    printf("\n");
+    printf("请输入一个整数：\n");
+    scanf("%d",&x);    //用户输入要插入的数 
+    if(x>a[9])    //判断该数大小 如果比最后一个元素大那就插到最后一个位置 
+    a[10]=x;
+    else     
+	{
+		for(i=0;i<10;i++)    //如果该数大小介于数组之间 
+		if(a[i]>x)   //那就找到比该数大的第一位 
+		{
+			for(j=10;j>=i;j--)  //再插入到这一位的前一位 
+			a[j+1]=a[j];
+			a[i]=x;
+			break;
+		}
+	}
+    
+    
+    for(i=0;i<11;i++)
+    printf("%d ",a[i]);    //输出插入后的数组 
+	system("pause");
+	return 0;
+}                                           //视觉梯队朱俊杰 
+
+
+
+

@@ -1,0 +1,67 @@
+# VisualExam
+梯队考核2
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int i,j;
+	int A[3][3]={1,2,3,4,5,6,7,8,9};  //创建A B矩阵 
+	int B[3][3]={9,8,7,6,5,4,3,2,1};
+	printf("A矩阵为：\n");
+for(int i=0;i<3;i++)
+{
+	for(int j=0;j<3;j++)
+	{
+		printf("%d ",A[i][j]);    //输出A矩阵 
+	}
+	printf("\n");
+}
+printf("\n");
+printf("B矩阵为：\n"); 
+for(int i=0;i<3;i++)
+{
+	for(int j=0;j<3;j++)
+	{
+		printf("%d ",B[i][j]);   //输出B矩阵 
+	}
+	printf("\n");
+}
+printf("\n");
+printf("A*B为：\n");
+	int C[3][3]={};    //创建C矩阵 且此时C=A*B 
+
+for(int i=0;i<3;i++)
+{
+	for(int j=0;j<3;j++)
+	{
+	printf("%d ",A[i][j]*B[i][j]);    //计算C矩阵每一个元素的大小 并输出 
+	}
+	printf("\n");
+}
+printf("\n");
+printf("A×B为：\n");   //此时C=A+B 
+for(int i=0;i<3;i++)
+{
+	for(j=0;j<3;j++)
+	{
+		int sum=0;   //创建0函数 
+		for(int k=0;k<3;k++)   //建立循环 
+		{
+			sum=sum+A[i][k]*B[k][j];  //计算矩阵C的每一个元素的大小 
+		}
+		C[i][j]=sum;
+	}
+}
+for(int i=0;i<3;i++)
+{
+	for(j=0;j<3;j++)
+	{
+		printf("%d ",C[i][j]);   //输出C矩阵 
+	}
+	printf("\n");
+
+}	
+	while(getchar()!='\n');
+	system("pause");
+return 0;
+ }                                             //视觉梯队朱俊杰 
