@@ -1,0 +1,45 @@
+#include<stdio.h> 
+ 
+int main()
+{
+	int a[11]={10,20,30,40,50,60,70,80,90,100};
+	int t1,t2,end,num,i,j;
+	printf("原来的输出：");
+    for (int i=0;i<10;i++)
+	{
+		
+		printf("%d ",a[i]);
+	}
+	printf("\n");
+	printf("请输入一个数：\n");
+	scanf("%d",&num);
+	end=a[9];
+	if(num>end)
+	{
+		a[10]=num;
+	} 
+    else
+    {
+    	for(i=0;i<10;i++)
+    	{
+    		if(a[i]>num)
+			{
+				t1=a[i];
+				a[i]=num; 
+				for(j=i+1;j<11;j++)
+				{
+					t2=a[j];
+					a[j]=t1;
+					t1=t2;				
+				}
+				break;				
+			} 
+		}
+	}
+	printf("最终的输出：");
+	for (int i=0;i<11; i++) 
+	{
+		printf("%d ",a[i]);
+	}
+	return 0;
+}
