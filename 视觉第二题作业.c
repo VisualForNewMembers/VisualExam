@@ -22,7 +22,7 @@ int main()
 		}
 	
 	}
-	 printf("A*B的结果是：\n");
+	 printf("A*B鐨勭粨鏋滄槸:\n");
 	 for(k=0;k<=8;k++)
 	{
 		printf("%d\t",arry2[k]);
@@ -37,7 +37,7 @@ int main()
 		}
 			
 	}
-	printf("A.B的结果是;\n");
+	printf("A路B鐨勭粨鏋滄槸:\n");
 	for(l=0;l<=8;l++)
 	{
 		printf("%d\t",arry3[l]);
