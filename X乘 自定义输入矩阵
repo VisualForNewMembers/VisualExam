@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+int main(void)
+{
+	int A[3][3],B[3][2];
+	char a,b,c;
+	cout<<"输入一个3*3的矩阵:\n";
+	int i,j;
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<3;j++)
+		cin>>A[i][j];
+		cout<<"\n";
+	}
+	for(i=0;i<3;i++)
+	{
+		cout<<"输入一个3*2的矩阵:\n"; 
+		for(j=0;j<2;j++)
+		cin>>B[i][j];
+		cout<<"\n";
+	}
+	int C[3][2]={0};
+	for(a=0;a<3;a++)
+	for(b=0;b<2;b++)
+	for(c=0;c<3;c++)
+	C[a][b]=A[a][c]*B[c][b];
+	cout<<"两矩阵X乘结果为：\n"; 
+	for(a=0;a<3;a++)
+	{
+		for(b=0;b<2;b++)
+		cout<<C[a][b]<<" ";		
+	}
+	return 0;
+}
