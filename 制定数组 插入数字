@@ -1,0 +1,50 @@
+#include<iostream>
+#define N 11
+using namespace std;
+int main(void)
+{
+	int Z[N],i,H;
+	cout<<"输入"<<N-1<<"个要组成数组的数字："; 
+	for(i=0;i<N-1;i++) cin>>Z[i];
+	int j,m;
+	for(i=0;i<N-2;i++)
+	{
+		for(j=i+1;j<N-1;j++)
+		if(Z[i]>Z[j])
+		{
+			m=Z[i];Z[i]=Z[j];Z[j]=m;
+		}
+		 
+	}
+	cout<<"数组升序排列为：";
+	for(i=0;i<N-1;i++) cout<<Z[i]<<" ";
+	cout<<"\n"<<"输入一个要插入的数:"; 
+
+	int s1,l,s2,max;
+	double n;
+	cin>>n;
+	max=Z[N-2];
+	if(n>=max) Z[N-1]=n;
+	else 
+  {
+	
+	for(i=0;i<N-1;i++)
+	{
+		if(Z[i]>n)
+		{
+			s1=Z[i];
+			Z[i]=n;
+			for(l=i+1;l<N;l++)
+			{
+				s2=Z[l];
+				Z[l]=s1;
+				s1=s2;
+			}
+			break;
+		} 
+	}	
+  }
+  cout<<"插入后的数组排列为：";
+  for(i=0;i<N;i++) cout<<Z[i]<<" ";
+  return 0; 
+}
