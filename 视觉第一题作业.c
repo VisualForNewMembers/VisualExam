@@ -16,7 +16,7 @@ int main ()
 					
 					}
 		printf("\n");			
-		printf("请输入一个整数：")	;		
+		printf("璇疯緭鍏ヤ竴涓暟:")	;		
 		scanf("%d",&a);	
 		arry[9]=a;
 		while(j<=9)
