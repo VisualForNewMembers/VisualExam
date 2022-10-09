@@ -1,0 +1,25 @@
+#include<stdio.h>
+int main()
+{
+ int a[11] = { 1,4,6,9,11,13,17,19,22,25 };
+ int b, i, c;
+
+ scanf_s("%d", &b);
+ for (i = 0; i < 10; i++) {
+  if (b >= a[i] && b <= a[i + 1]) {
+   c = i + 1;
+   break;
+  }
+ }
+ for (i = 9; i >= c;i--) {
+  a[i+1] = a[i];
+}
+ a[c] = b;
+ for (i = 0; i < 11; i++) {
+  printf("%-5d", a[i]);
+ }
+
+
+
+ return 0;
+}
