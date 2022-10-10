@@ -1,0 +1,89 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	cout << "输入第一个矩阵A为：" << endl;
+	int	arrA[2][3] =
+	{
+		{1,2,3},
+		{4,5,6}
+	};
+	for (int i = 0; i < 2; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			cout << arrA[i][j] << " ";
+		}
+		cout << endl;
+	}
+
+
+
+	cout << "输入第二个矩阵B为：" << endl;
+	int arrB[2][3] =
+	{
+		{1,2,3},
+		{4,5,6}
+	};
+	for (int i = 0; i < 2; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			cout << arrB[i][j] << " ";
+		}
+		cout << endl;
+	}
+
+
+
+	int arrC[2][3] = {0};
+	for (int i = 0; i <= 1; i++)
+	{
+		for (int j = 0; j<= 2; j++)
+		{
+			arrC[i][j] = arrA[i][j] * arrB[i][j];
+		}
+
+	}
+
+
+
+	int arrD[2][3] = {0};
+	for (int i = 0; i <= 1; i++)
+	{
+		for (int j = 0; j <= 2; j++)
+		{
+			arrD[i][j] = arrA[i][j] * arrB[i][j];
+		}
+
+	}
+
+
+
+	int arrE[2][3] = {0};
+	for (int i = 0; i <= 1; i++)
+	{
+		for (int j = 0; j <= 2; j++)
+		{
+			arrE[i][j] = arrC[i][j] + arrD[i][j];
+		}
+	}
+
+
+
+	cout << "矩阵A×矩阵B的值为" << endl;
+	for (int i= 0; i <= 1; i++)
+	{
+		for (int j = 0; j <= 2; j++)
+		{
+			cout << arrE[i][j] << "\t";
+
+		}
+		cout << endl;
+	}
+
+
+	return 0;
+
+}
