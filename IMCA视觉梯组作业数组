@@ -1,0 +1,51 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	//原顺序组
+	int arr[8] = { 5,9,10,11,12,13,14,15};
+	cout << "原顺序组为：" << endl;
+	for (int i = 0; i < 7; i++)
+	{
+		cout << arr[i] <<"  ";
+	}
+	cout << endl;
+
+
+	//创建一个输入值a，并让用户输入
+	int a=0;
+	cout << " 请随机输入一个值，最终会按照从小到大的顺序插入到数组中：";
+	cin >> a;
+
+
+	//判断输入值a的大小，并按从小到大的顺序排序
+	if (a > arr[6]) 
+	{
+		arr[7] = a;
+	}
+	else 
+	{
+		for(int i=0;i<=7; i++)
+			if (arr[i] > a) 
+			{
+				for (int j = 7; j >= i; j--) 
+				{
+					arr[j + 1] = arr[j];
+			}
+				arr[i] = a;
+				break;
+			}
+
+	}
+	//最后输出最终数组
+	cout << "新的数组为：";
+	for (int i = 0; i < 8; i++) 
+	{
+		cout << (int)arr[i] << "  ";
+	}
+	
+	cout << "请手动关闭程序." << endl;
+	cin >> a;
+	
+	return 0;
+}
